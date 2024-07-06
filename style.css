@@ -1,0 +1,690 @@
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'poppins',sans-serif;
+}
+body{
+    color:black;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    font-size: 25px;
+    color:blue;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.scroll-line {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px; /* Initial height of the line */
+    width: 0%; /* Initial width of the line */
+    background-color: #ff4500; /* Color of the scroll line */
+    z-index: 999; /* Lower z-index to appear behind navbar */
+    transition: width 0.3s ease-out; /* Smooth transition for width change */
+}
+
+
+
+.navbar a{
+    display: inline-block;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay:calc(.2s*var(--i)) ;
+}
+.navbar a:hover{
+    color: #0ef;
+}
+.home {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url(assets/new.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+.home-content{
+    max-width: 600px;
+}
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay:.7s;
+}
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700px;
+    margin: -3px 0;
+}
+.home-content h3 span{
+    color: green;
+}
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity:1;
+    }
+
+}
+@keyframes slideTop{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity:1;
+    }
+
+}
+@keyframes slideBottom{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity:1;
+    }
+
+}
+
+
+
+.profile {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust height as needed */
+    background: url(assets/profile.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 10% 0; /* Adjust padding as needed */
+    margin-top: 10px; /* Adjust margin as needed */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        
+    }
+    
+    #profile-img {
+        margin-bottom: 5px; /* Space between image and text */
+    }
+    
+    #profile-img img {
+        width: 150px; /* Adjust image width as needed */
+        height: 150px; /* Adjust image height as needed */
+        object-fit: cover; /* Maintain aspect ratio and cover container */
+        border-radius: 50%; /* Optional: Make image circular */
+    }
+    
+    .profile > div {
+        
+        padding: 10px;
+        border-radius: 8px; /* Optional: Rounded corners */
+        
+        max-width: 400px; /* Optional: Limit maximum width */
+    }
+    
+    .profile h3 {
+        margin-top: 0; /* Remove default margin for h3 */
+    }
+    
+    .profile p {
+        margin-bottom: 0; /* Remove default margin for p */
+    }
+/* .text-box { 
+     background-color:rgb(188,173,224,1);
+    padding: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+     text-align: left; 
+} */
+
+.text-box h3 {
+    margin-top: 0; /* Remove default margin for h3 */
+}
+
+.text-box p {
+    margin-bottom: 0; /* Remove default margin for p */
+    color: black;
+    background: transparent;
+    background-color: transparent;
+      }
+      
+
+      .education {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        background: url(assets/education.jpg) no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 70px 10% 0;
+    }
+    
+    .education-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px; /* Space between header and schools */
+    }
+    
+    .education-header img {
+        width: 50px; /* Adjust width of the icon */
+        height: 50px; /* Adjust height of the icon */
+        margin-right: 10px; /* Space between icon and text */
+    }
+    
+    .education-header h3 {
+        margin: 0; /* Remove default margin */
+    }
+    
+    .album .card {
+        border: none; /* Remove border */
+        background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+        transition: box-shadow 0.3s; /* Smooth box-shadow transition */
+    }
+    
+    .album .card:hover {
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Hover box-shadow effect */
+    }
+    
+    .album .card-img-top {
+        height: 250px; /* Adjust card image height */
+        object-fit: cover; /* Maintain aspect ratio and cover container */
+    }
+    
+    .album .card-body {
+        text-align: center; /* Center align text in card body */
+    }
+    
+    .album .card-body h4 {
+        margin-top: 0; /* Remove top margin for h4 */
+    }
+    
+    .carousel-control-prev, .carousel-control-next {
+        width: 5%; /* Adjust the width as needed */
+        background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+        text-align: center;
+    }
+    
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        color: #fff; /* Control icon color */
+    }
+    
+    .carousel-control-prev:hover, .carousel-control-next:hover {
+        background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+    }
+    
+    .projects {
+        position: relative;
+        width: 100%;
+        min-height: 100vh; /* Adjust height as needed */
+        background: url(assets/home.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 70px 10% 0;
+    }
+    
+    .project-header img {
+        width: 50px; /* Adjust width of the icon */
+        height: 50px; /* Adjust height of the icon */
+        margin-right: 10px; /* Space between icon and text */
+    }
+    
+    .project-header h3 {
+        margin-top: 10px; /* Adjust top spacing */
+    }
+    
+    .project {
+         /* Background color for project */
+        padding: 20px;
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift */
+        text-align: center; /* Center align text within projects */
+    }
+    
+    .project h3 {
+        margin-top: 0; /* Remove top margin for h3 */
+    }
+    
+    .project p {
+        margin-bottom: 0; /* Remove bottom margin for p */
+        font-size: 16px; /* Adjust font size as needed */
+    }
+    .offwhite-bg {
+        background-color: #f8f9fa; /* Off-white background color */
+        padding: 20px; /* Adjust padding as needed */
+        border-radius: 10px; /* Optional: Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for depth */
+        text-align: center; /* Optional: Center-align content */
+    }
+    
+    .offwhite-bg img {
+        margin-bottom: 15px; /* Optional: Space between image and text */
+    }
+    
+    .offwhite-bg h3 {
+        margin-bottom: 10px; /* Optional: Space between heading and paragraph */
+        font-size: 20px; /* Optional: Adjust font size */
+    }
+    
+    .offwhite-bg p {
+        margin-bottom: 0; /* Optional: Remove bottom margin for paragraphs */
+    }
+    
+    
+
+
+/* .experiences {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url(assets/natural-green-palm-leaves-corner-white-background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+    
+}
+ */
+
+
+
+
+.skill{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url(assets/home4.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+        position: relative;
+        width: 100%;
+        min-height: 100vh; /* Adjust height as needed */
+  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 70px 10% 0;
+    }
+    
+    
+      .skills {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+      }
+      
+      .skills-bar {
+        padding: 25px 30px;
+      }
+      
+      .skills-bar .bar {
+        margin: 25px 0;
+      }
+      
+      .skills-bar .bar .info span {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+      
+      .skills-bar .bar .info {
+        margin-bottom: 8px;
+        color: #07374a;
+      }
+      
+      .skills-bar .bar .progress-line {
+        position: relative;
+        height: 10px;
+        width: 550px;
+        background: #f0f0f0;
+        border-radius: 10px;
+        transform: scaleX(0);
+        transform-origin: left;
+        animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+      }
+      
+      .bar .progress-line span {
+        position: absolute;
+        background: #25b79f;
+        height: 100%;
+        border-radius: 10px;
+        transform: scaleX(0);
+        transform-origin: left;
+        text-transfrom = uppercase;
+        animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+      }
+      
+      @keyframes animate {
+        100% {
+          transform: scaleX(1);
+        }
+      }
+      
+      .progress-line .python {
+        width: 90%;
+      }
+      .progress-line .excel {
+        width: 80%;
+      }
+      .progress-line .html {
+        width: 80%;
+      }
+      .progress-line .css {
+        width: 70%;
+      }
+      .progress-line .bootstrap {
+        width: 70%;
+      }
+      .progress-line .javascript {
+        width: 60%;
+      }
+      .progress-line .c {
+        width: 90%;
+      }
+      
+      .bar .progress-line span::before {
+        position: absolute;
+        content: "";
+        height: 0;
+        right: 0;
+        top: -14px;
+        width: 0;
+        border: 7px solid transparent;
+        border-bottom-width: 0px;
+        border-right-width: 0px;
+        border-top-style: #f0f0f0;
+        border-top-color: #07374a;
+      }
+      
+      .bar .progress-line span::after {
+        position: absolute;
+        right: 0;
+        top: -28px;
+        color: #f0f0f0;
+        font-size: 12px;
+        font-weight: 700;
+        background: #07374a;
+        padding: 1px 8px;
+        border-radius: 3px;
+      }
+      
+      
+      .progress-line .python::after {
+        content: "90%";
+      }
+      .progress-line .excel::after {
+        content: "80%";
+      }
+      .progress-line .html::after {
+        content: "80%";
+      }
+      .progress-line .css::after {
+        content: "70%";
+      }
+      .progress-line .bootstrap::after {
+        content: "70%";
+      }
+      .progress-line .javascript::after {
+        content: "60%";
+      }
+      .progress-line .c::after {
+        content: "90%";
+      }
+      
+      /* ////........Media Query........//// */
+      
+      @media (max-width: 700px) {
+          .skills{
+              width: 80%;
+          }
+      
+          .skills-bar .bar .progress-line{
+              width: 100%;
+          }
+      }    
+      
+      
+
+
+
+      .experiences {
+        padding: 100px 0; /* Adjust padding as needed */
+        background:url(assets/natural-green-palm-leaves-corner-white-background.jpg) no-repeat
+    }
+    
+    .experience-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    
+    .experience-header img {
+        width: 80px; /* Adjust image size */
+        height: 80px; /* Adjust image size */
+        margin-right: 20px;
+    }
+    
+    .experience-header h3 {
+        margin: 0;
+    }
+    
+    .row {
+        position: relative;
+    }
+    
+    .col-lg-6 {
+        width: 50%;
+    }
+    
+    .divider {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 2px; /* Adjust divider width */
+        background-color: green /* Divider color */
+        transform: translateX(-50%);
+    }
+    
+    .experience, .language {
+        margin-bottom: 30px;
+    }
+    
+    .language h3 {
+        margin-bottom: 10px;
+    }
+    
+    .language ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .language li {
+        margin-bottom: 10px;
+    }
+         
+    
+    
+    .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+    
+    .contact-info {
+        margin-top: 20px;
+    }
+    
+    .contact-info h4 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .contact-info h4 span {
+        font-weight: bold;
+    }
+    
+    /* Adjustments for responsiveness */
+    @media (max-width: 768px) {
+        .section-title {
+            font-size: 2rem;
+        }
+        
+        .contact-info h4 {
+            font-size: 1.2rem;
+        }
+    }
+    
+    .contact {
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        height: 100vh;
+        background: url(assets/bottom-border-made-with-fresh-green-leaves-white-background.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        padding: 70px 10% 0;
+      }
+      
+      .container {
+        max-width: 1080px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+       
+      }
+      
+      .section-header {
+        margin-bottom: 50px;
+        text-align: center;
+
+      }
+      
+      .section-header h2 {
+      
+        font-weight: bold;
+        font-size: 3em;
+        margin-bottom: 20px;
+      }
+    
+      
+      .row  {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+      }
+      
+      .contact-info {
+        width: 50%;
+      }
+      
+      .contact-info-item {
+        display: flex;
+        margin-bottom: 30px;
+      }
+      
+      .contact-info-icon {
+        height: 70px;
+        width: 70px;
+        
+        text-align: center;
+        border-radius: 50%;
+      }
+      
+      .contact-info-icon i {
+        font-size: 30px;
+        line-height: 70px;
+      }
+      
+      .contact-info-content {
+        margin-left: 20px;
+      }
+      
+      .contact-info-content h4 {
+        color: #1da9c0;
+        font-size: 1.4em;
+        margin-bottom: 5px;
+      }
+      
+      .card {
+        opacity: 0;
+        transform: translateY(50px); /* Initially move cards down by 50px */
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    
+    .card.animated {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+
+
